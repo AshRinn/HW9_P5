@@ -2,10 +2,11 @@
 using namespace std;
 
 int main() {
- int matrix[2][2], i, j;
+ float matrix[2][2];
+  int i, j;
   float Detr = 0;
-  int Adj[2][2];
-  int A_Inverse[2][2];
+  float Adj[2][2];
+  float A_Inverse[2][2];
   cout << "Enter the top row of the matrix, then the bottom row of matrix: \n";
   for (i = 0; i < 2; i++)
   for (j = 0; j < 2; j++)
@@ -17,9 +18,10 @@ printf("\nGiven martix is:");
   for (j = 0; j < 2; j++)
   cout<< matrix[i][j]<<"\t";
   }
+  cout<< endl;
 // finding the determinant of a
-  Detr = 1.0/( (matrix[0][0] * matrix[1][1]) - (matrix[1][0] * matrix[0][1]));
-cout << Detr;
+  Detr = 1.0/( (1.0 * matrix[0][0] * matrix[1][1]) - (1.0 * matrix[1][0] * matrix[0][1]));
+//cout << Detr;
 // finding the adjoint of a 
   Adj[0][0]= matrix[1][1];
   Adj[0][1]= -matrix[0][1];
@@ -31,7 +33,8 @@ cout << Detr;
   A_Inverse[0][1]= Detr * Adj[0][1];
   A_Inverse[1][0]= Detr * Adj[1][0];
   A_Inverse[1][1]= Detr * Adj[1][1];
-
+cout << "\n";
+cout << "The Inverse of the Given matirx is:";
   for(i = 0; i < 2; i++)
   {
   cout<<"\n";
