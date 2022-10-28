@@ -18,8 +18,8 @@ printf("\nGiven martix is:");
   cout<< matrix[i][j]<<"\t";
   }
 // finding the determinant of a
-  Detr = 1/( (matrix[0][0] * matrix[1][1]) - (matrix[1][0] * matrix[0][1]));
-
+  Detr = 1.0/( (matrix[0][0] * matrix[1][1]) - (matrix[1][0] * matrix[0][1]));
+cout << Detr;
 // finding the adjoint of a 
   Adj[0][0]= matrix[1][1];
   Adj[0][1]= -matrix[0][1];
@@ -36,7 +36,7 @@ printf("\nGiven martix is:");
   {
   cout<<"\n";
   for (j = 0; j < 2; j++)
-  cout<< A_Inverse[i][j]<<"\t";
+  cout<<A_Inverse[i][j]<< "\t";
   }
 
 }
